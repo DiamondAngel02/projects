@@ -45,6 +45,7 @@ function randomMovement() {
 }
 
 document.addEventListener("keydown", handleKeyPress);
+
 function handleKeyPress(e) { //e stands for event, we need to access the event info to find out which key is being pressed. Adding event info to the function. 
     switch (e.code) {
         case "Enter":
@@ -55,7 +56,7 @@ function handleKeyPress(e) { //e stands for event, we need to access the event i
             playerPosition -= 15; //subtraction assignment operator, subtract our particular values from our current value, and reupdate
             break;
         case "ArrowDown":
-            if (playerPosition + paddleHeight / 2 >= 0) return;    
+            if (playerPosition + paddleHeight / 2 >= canvas.height) return;    
             playerPosition += 15;
             break;
     }
@@ -76,12 +77,7 @@ function gameStart() {
 
 function drawPlayerPaddle() {
     ctx.fillStyle = "blue"; //ctx.strokeStyle (change color)
-    ctx.fillRect(
-        0,
-        playerPosition - paddleHeight / 2,
-        paddleWidth,
-        paddleHeight
-    );
+    ctx.fillRect(0, playerPosition - paddleHeight / 2, paddleWidth, paddleHeight);
 }
 
 
@@ -163,17 +159,17 @@ function collide() {
 }
 
 function score(player) {
-    if(player === "computer"){
+    if (player === "computer"){
         computerScore++;
     } else {
         playerScore++;
     }
-    if(computerScore === winningTotal) {
-        endGame("computer");
+    if (computerScore === winningTotal) {
+        endGame('computer');
         return;
     }
-    else if(playerScore === winningTotal){
-        endGame("player");
+    else if (playerScore === winningTotal){
+        endGame('player');
         return;
     }
     ballX = canvas.width / 2;
@@ -185,11 +181,11 @@ function endGame(winner) {
     clearInterval(gameLoop);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawScore();
-    if (winner === "computer") {
-        ctx.fillStyle = "red";
+    if (winner === 'computer') {
+        ctx.fillStyle = 'red';
     }
     else {
-        ctx.fillStyle = "blue"; 
+        ctx.fillStyle = 'blue'; 
     }
     ctx.textAlign = 'center'
     ctx.fillText('The winner is: ${winner}', canvas.width / 2, canvas.height / 2);
@@ -204,9 +200,9 @@ function moveComputer(){
 }
 
 function generateRandomBounce(){
-    const number0to1 = Math.floor(Math.random() *2);
+    const number0to1 = Math.floor(Math.random() * 2);
     const positiveOrNegative = number0to1 === 0 ? "-" : "+";
-    return Number(positiveOrNegative + Math.random() /2);
+    return Number(positiveOrNegative + Math.random() / 2);
 }
 
 //loop setInterval will restart after a number of ms.
@@ -217,7 +213,9 @@ function loop() {
     drawComputerPaddle();
     drawScore();
     drawCanvas();
-    drawBallcollide(); void
+    //drawBallCollide(); void
     collide();
+    moveComputer();
+    generateRandomBounce();
 };
 
