@@ -17,6 +17,7 @@ a {
     cursor: pointer; 
     background-color: rgb(168, 213, 252);
     box-shadow: 5px 5px black;
+    margin: 20px;
 }
 
 a:active {
