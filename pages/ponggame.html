@@ -5,16 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pong Game</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
 
     <style>
         canvas {
             background-color: grey;
             display: block;
             margin: 0 auto;
+            box-shadow: 5px 5px black;
+            border-width: 1px;
+            border-style: solid;
         }
+        
+        /*back button*/
+header {
+    display: block;
+    width: 100%;
+    height: 20px;
+}
+#home-btn {
+    padding: 5px 10px 5px 10px;
+    margin-right: 16px;
+    margin-top: 20px;
+    float: left;
+    background-color: rgb(129, 191, 241);
+    border-radius: 0;
+    text-decoration: none;
+    color: black;  
+    font-size: 20px;
+    cursor: pointer; 
+    background-color: rgb(168, 213, 252);
+    box-shadow: 5px 5px black;
+    margin: 20px;
+    border-width: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
     </style>
 </head>
 <body>
+    <header>
+        <a href="/index.html"><button id="home-btn">back -></button></a>
+    </header>  
+
     <canvas></canvas>
     <script src="../scripts/ponggame.js"></script>
 </body>

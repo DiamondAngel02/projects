@@ -1,0 +1,77 @@
+/*back button*/
+header {
+    display: block;
+    width: 100%;
+    height: 20px;
+}
+#home-btn {
+    padding: 5px 10px 5px 10px;
+    margin-right: 16px;
+    margin-top: 20px;
+    float: left;
+    background-color: rgb(129, 191, 241);
+    border-radius: 0;
+    text-decoration: none;
+    color: black;  
+    font-size: 20px;
+    cursor: pointer; 
+    background-color: rgb(168, 213, 252);
+    box-shadow: 5px 5px black;
+    margin: 20px;
+}
+
+/* Tetris styling*/
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+button {
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: aliceblue;
+    display: block;
+    cursor: pointer;
+}
+
+.grid {
+    width: 300px;
+    height: 600px;
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    border-style: dashed;
+}
+
+.grid div{
+    height: 30px;
+    width: 30px; 
+}
+
+.mini-grid {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    margin-left: 50px;
+    border-style: dashed;
+}
+
+.mini-grid div {
+    height: 30px;
+    width: 30px;
+}
