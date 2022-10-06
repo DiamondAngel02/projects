@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighting game</title>
+
+    <link rel="stylesheet" href="/styles/fighting.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            background-color: rgb(235, 235, 235);
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+            box-shadow: 7px 7px black;
+            border-style: solid;
+            border-width: 1px;
+            padding: 10px;
+            
+        }
+
+        .topHealth {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Player health */
+        #playerHealthDiv {
+            position: relative;
+            height: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #playerHealth {
+            background-color: yellow;
+            height: 30px;
+            width: 100%;
+        }
+
+        #playerCurrentHealth {
+            position: absolute;
+            background-color: blue;
+            top: 0;
+            /*how far from the parent div should this rectangel be placed = full width and height of the parent*/
+            right: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Timer */
+        #timer {
+            background-color: grey;
+            height: 100px;
+            width: 100px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Enemy health */
+        #enemyHealthDiv {
+            position: relative;
+            height: 30px;
+            width: 100%;
+        }
+
+        #enemyHealth {
+            background-color: yellow;
+            height: 30px;
+        }
+
+        #enemyCurrentHealth {
+            position: absolute;
+            background-color: blue;
+            top: 0;
+            /*how far from the parent div should this rectangel be placed = full width and height of the parent*/
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        #winner {
+            position: absolute;
+            color: white;
+          /*  display: flex; (when shown) */
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: none;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="topHealth">
+
+            <!-- player health -->
+            <div id="playerHealthDiv">
+                <div id="playerHealth"></div>
+                <div id="playerCurrentHealth"></div>
+            </div>
+
+
+            <!-- timer -->
+            <div id="timer">10</div>
+
+            <!-- enemy health -->
+            <div id="enemyHealthDiv">
+                <div id="enemyHealth"></div>
+                <div id="enemyCurrentHealth"></div>
+            </div>
+        </div>
+        <div id="winner">Tie</div>
+        <canvas></canvas>
+    </div>
+
+    <script src="/scripts/fighting.js"></script>
+</body>
+
+</html>
