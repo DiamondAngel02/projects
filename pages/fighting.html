@@ -15,6 +15,26 @@
             box-sizing: border-box;
         }
 
+        /*back button*/
+header {
+    display: block;
+    width: 1000px;
+    height: 80px;
+}
+#home-btn {
+    padding: 5px 10px 5px 10px;
+    margin: 25px;
+    background-color: rgb(129, 191, 241);
+    border-radius: 0;
+    text-decoration: none;
+    color: black;  
+    font-size: 20px;
+    cursor: pointer; 
+    background-color: rgb(168, 213, 252);
+    box-shadow: 5px 5px black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
         body {
             position: relative;
             background-color: rgb(235, 235, 235);
@@ -30,7 +50,7 @@
             box-shadow: 7px 7px black;
             border-style: solid;
             border-width: 1px;
-            padding: 10px;
+            padding: 7px;
             
         }
 
@@ -39,7 +59,7 @@
             display: flex;
             align-items: center;
             width: 100%;
-            padding: 20px;
+            padding: 25px;
         }
 
         /* Player health */
@@ -49,12 +69,16 @@
             width: 100%;
             display: flex;
             justify-content: flex-end;
+            border-top: 4px solid white;
+          border-left: 4px solid white;
+          border-bottom: 4px solid white;
         }
 
         #playerHealth {
             background-color: yellow;
-            height: 30px;
+            height: 25px;
             width: 100%;
+            border-bottom: 4px solid white;
         }
 
         #playerCurrentHealth {
@@ -65,17 +89,22 @@
             right: 0;
             bottom: 0;
             width: 100%;
+
         }
 
         /* Timer */
         #timer {
-            background-color: grey;
-            height: 100px;
-            width: 100px;
+            background-color: rgb(5, 0, 93);
+            height: 80px;
+            width: 80px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
+          border: 4px solid white;
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 30px;
         }
 
         /* Enemy health */
@@ -83,11 +112,16 @@
             position: relative;
             height: 30px;
             width: 100%;
+            border-top: 4px solid white;
+          border-right: 4px solid white;
+          border-bottom: 4px solid white;
         }
 
         #enemyHealth {
             background-color: yellow;
-            height: 30px;
+            height: 25px;
+            border-bottom: 4px solid white;
+            
         }
 
         #enemyCurrentHealth {
@@ -98,6 +132,7 @@
             right: 0;
             left: 0;
             bottom: 0;
+            padding-right: 10px;
         }
 
         #winner {
@@ -120,6 +155,9 @@
 </head>
 
 <body>
+
+   
+
     <div class="container">
 
         <div class="topHealth">
@@ -141,9 +179,20 @@
             </div>
         </div>
         <div id="winner">Tie</div>
-        <canvas></canvas>
+        <canvas></canvas> 
+        
+        <header>
+        <a href="/index.html"><button id="home-btn">back -></button></a>
+    </header>   
     </div>
 
+   
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
     <script src="/scripts/fighting.js"></script>
 </body>
 

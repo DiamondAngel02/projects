@@ -101,13 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //assign functions to keyCodes
     function control(e) {
-        if (e.keyCode === 37) { //left arrow
+        if (e.keyCode === 65) { //left arrow
             moveLeft()
-        } else if (e.keyCode === 38) {// upp arrow
+        } else if (e.keyCode === 87) {// upp arrow
             rotate()
-        } else if (e.keyCode === 39) { //right arrow
+        } else if (e.keyCode === 68) { //right arrow
             moveRight()
-        } else if (e.keyCode === 40) { //down arrow
+        } else if (e.keyCode === 83) { //down arrow
             moveDown()
         }
     }
