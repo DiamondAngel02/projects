@@ -8,6 +8,7 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 const gravity = 0.7
 
 
+
 class Sprite {
     constructor({
         position,
@@ -113,7 +114,11 @@ class Fighter extends Sprite {
             sprites[sprite].image.src = sprites[sprite].imageSrc
 
         }
+
+        
     }
+
+    
     
     update() {
         this.draw()
@@ -237,6 +242,19 @@ class Fighter extends Sprite {
         }
     }
 }
+
+
+function rectangularCollision({rectangle1, rectangle2 }) {
+    return (
+      rectangle1.attackBox.position.x + rectangle1.attackBox.width >=
+        rectangle2.position.x &&
+      rectangle1.attackBox.position.x <=
+        rectangle2.position.x + rectangle2.width &&
+      rectangle1.attackBox.position.y + rectangle1.attackBox.height >=
+        rectangle2.position.y &&
+      rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
+    )
+  }
 
 const background = new Sprite({
     position: {
@@ -401,17 +419,7 @@ const keys = {
     }
 }
 
-function rectangularCollision({ rectangle1, rectangle2 }) {
-    return (
-      rectangle1.attackBox.position.x + rectangle1.attackBox.width >=
-        rectangle2.position.x &&
-      rectangle1.attackBox.position.x <=
-        rectangle2.position.x + rectangle2.width &&
-      rectangle1.attackBox.position.y + rectangle1.attackBox.height >=
-        rectangle2.position.y &&
-      rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
-    )
-  }
+
   
 
 function determineWinner({ player, enemy, timerId }) {
