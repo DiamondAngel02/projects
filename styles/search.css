@@ -1,10 +1,69 @@
+#home-btn {
+    padding: 5px 10px 5px 10px;
+    margin-right: 16px;
+    margin-top: 20px;
+    border-radius: 0;
+    text-decoration: none;
+    color: black;  
+    font-size: 20px;
+    cursor: pointer; 
+    background-color: rgb(168, 213, 252);
+    box-shadow: 5px 5px black;
+    margin: 20px;
+    border-width: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .search-wrapper {
     display: flex;
     flex-direction: column;
     gap: .25rem;
 }
 
+.search-wrapper > #search {
+    min-width: 100px;
+    max-width: 340px;
+}
+
 input {
     font-size: 1rem;
     
+}
+
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+}
+
+.card {
+    border: 1px solid black;
+    background-color: white;
+    padding: .5rem;
+}
+
+.card > .header {
+    margin-bottom: .25rem;
+}
+
+.card > .body {
+    font-size: .8rem;
+    color: grey;
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    display: flex;
+    margin-top: 50px;
+}
+
+footer > a {
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
+    margin-left: 20px;
 }

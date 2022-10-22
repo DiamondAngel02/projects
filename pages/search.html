@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="/styles/search.css">
+    <script src="/scripts/search.js" defer></script>
+    <link rel="stylesheet" href="/styles/search.css">
     <title>Search</title>
 </head>
+
 <body>
+    <header>
+        <a href="/index.html"><button id="home-btn">back -></button></a>
+    </header>  
+
     <div class="search-wrapper">
         <label for="search">Search User</label>
-        <input type="search" id="search">
+        <input type="search" id="search" data-search>
     </div>
-<div class="user-cards">
-    <div class="card">
-        <div class="header">My name</div>
-        <div class="body">email@gmail.com</div>
-    </div>
-</div>
+    <div class="user-cards" data-user-cards-container></div>
+
+    <!-- Won't show up on the page, but can be used in js -->
+    <template data-user-template> 
+        <div class="card">
+            <div class="header" data-header></div>
+            <div class="body" data-body></div>
+        </div>
+    </template>
+   
+    <footer>
+    <a href="https://www.youtube.com/watch?v=TlP5WIxVirU&ab_channel=WebDevSimplified">Youtube link</a>
+    <a href="https://jsonplaceholder.typicode.com/">Json placeholder</a>
+    </footer>
     
 </body>
+
 </html>
