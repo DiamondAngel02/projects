@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,83 @@
     <title>Tabs</title>
     <link rel="stylesheet" href="/styles/tabs.css">
 </head>
+
 <body>
     <header>
-        <a href="/index.html"><button id="home-btn">back -></button></a>
-    </header>  
-    <h1>Tabs Project</h1>
+        <a href="/index.html"><button id="home-btn">back -></button></a>    
+        <h1>tabs project</h1>
+    </header>
+    <div class="line">
+        <hr width="70%" />
+    </div>
 
-    <section>
+
+    <section class="section">
         <div class="title">
             <h2>About</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel urna sit amet lectus dictum aliquet et nec nisi. Maecenas consectetur laoreet arcu at malesuada.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel urna sit amet lectus dictum
+                aliquet et nec nisi. Maecenas consectetur laoreet arcu at malesuada.
             </p>
         </div>
-        .about-center.section-center
+        <div class="about-center section-center">
+            <article class="about-img">
+                <img src="/images/orange.png" alt="chicken">
+            </article>
+            <article class="about">
+                <!-- btn container -->
+                <div class="btn-container">
+                    <button class="tab-btn active" data-id="history">history</button>
+                    <button class="tab-btn" data-id="vision">vision</button>
+                    <button class="tab-btn" data-id="goals">goals</button>
+                </div>
+                <div class="about-content">
+                    <!-- single item -->
+                    <div class="content active" id="history">
+                        <h4>history</h4>
+                        <!-- History -->
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste numquam nostrum doloremque
+                            temporibus rem, nobis odit culpa cupiditate veniam excepturi eveniet magnam quidem vel ex!
+                            Tempore, officia molestiae. Sint, optio.</p>
+                    </div>
+                    <!-- end single item -->
+                    <!-- single item -->
+                    <div class="content" id="vision">
+                        <h4>vision</h4>
+                        <!-- Vision -->
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste numquam nostrum doloremque
+                            temporibus rem, nobis odit culpa cupiditate veniam excepturi eveniet magnam quidem vel ex!
+                            Tempore, officia molestiae. Sint, optio.
+                        </p>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+                    </div>
+                    <!-- end single item -->
+                    <!-- single item -->
+                    <div class="content" id="goals">
+                        <h4>goals</h4>
+                        <!-- Goals -->
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste numquam nostrum doloremque
+                            temporibus rem, nobis odit culpa cupiditate veniam excepturi eveniet magnam quidem vel ex!
+                            Tempore, officia molestiae. Sint, optio.</p>
+
+                    </div>
+                    <!-- end single item -->
+                </div>
+            </article>
+
+
+        </div>
 
 
     </section>
-    
+
     <script src="/scripts/tabs.js"></script>
 
 </body>
+
 </html>

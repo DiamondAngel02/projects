@@ -4,6 +4,7 @@ const userCardContainer = document.querySelector("[data-user-cards-container]")
 const searchInput = document.querySelector("[data-search]")
 
 let user
+let users
 
 //eventListener for filter 
 //e value , whatever is typed
@@ -30,3 +31,4 @@ fetch("https://jsonplaceholder.typicode.com/users")
             return { name: user.name, email: user.email, element: card } //data about user
         })
     })
+
