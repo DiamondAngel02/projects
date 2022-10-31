@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+</head>
+<body>
+    
+<button>Press me</button>
+<div></div>
+<div></div>
+<div></div>
+
+<script>
+    let todo1 = "Buy food";
+    let todo2 = "Code";
+    let todo3 = "Cuddle";
+
+    
+
+    function addTodo(todoTitle){        // A functiion, with name and psrameter
+        let element = document.createElement('div'); // create a html element, the type of the element
+    element.innerHTML = todoTitle; // change the text of the element that was just put in
+    document.body.appendChild(element); // adds a new element at the end of the body
+    }
+
+    addTodo(todo1);
+    addTodo(todo2);
+    addTodo(todo3);
+
+
+    
+
+</script>
+
+</body>
+</html>
