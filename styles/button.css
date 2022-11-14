@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #131313;
+}
+
+.button {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 20px 20px;
+    text-decoration: none;
+    background-color: #76972D;
+    border-radius: 14px;
+    color: white;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    font-size: 20px;
+    transition: background-color 0.4s;
+    text-align: center;
+    margin: 20px;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent, #ffffff71,transparent);
+    transform: translateX(-200px) skew(-20deg);
+    transition: transform 0.4s;
+}
+
+.button:hover::before {
+    transform: translateX(260px) skew(-20deg);
+}
+
+.button:hover {
+    background-color: #76972D;
+} 
+
+.button:active {
+    background-color: #BDD086;
+}
