@@ -1,0 +1,37 @@
+/*back button*/
+header {
+    display: block;
+    width: 100%;
+    height: 20px;
+}
+button {
+    padding: 5px 10px 5px 10px;
+    margin-right: 16px;
+    margin-top: 20px;
+    float: left;
+    background-color: rgb(129, 191, 241);
+    border-radius: 0;
+    text-decoration: none;
+    color: black;  
+    font-size: 20px;
+    cursor: pointer; 
+    background-color: rgb(168, 213, 252);
+    box-shadow: 5px 5px black;
+    margin: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 200px 0;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.choice {
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+}
